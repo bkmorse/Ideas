@@ -41,7 +41,7 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost:/tmp/mysql/silvia.sock';
+$db['default']['hostname'] = $_SERVER['DATABASE_HOST'];
 $db['default']['username'] = 'trinidad';
 $db['default']['password'] = 'kNxqni2w';
 $db['default']['database'] = 'silvia';
