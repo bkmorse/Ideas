@@ -3,17 +3,20 @@
 class Add Extends CI_Controller {
   function index() {
     
-    $this->load->dbforge();
     $this->load->database();
+    $this->load->model('add_model');
     
-    $data = array(
-       'subject' => 'My subject' ,
-       'body' => 'My body'
-    );
+    $this->form_validation->set_rules('subject', 'Subject', 'required');
+    $this->form_validation->set_rules('body', 'Body', 'required');
 
-    $this->db->insert('comment', $data);
+    if ($this->form_validation->run() == TRUE) {
+      if($this->add_model->addIdea())
+        print '<h1>Idea added</h1>';
+    }
     
-    print_r($this->db->get('comment')->result_array());
+    $data['ideas'] = $this->add_model->getIdea();
+    $this->load->view('add-idea-view', $data);
+    
     
   }
   
