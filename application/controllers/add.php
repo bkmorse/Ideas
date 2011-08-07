@@ -28,6 +28,7 @@ class Add Extends CI_Controller {
   function table() {
     $this->load->dbforge();
     $this->load->database();
+    $this->dbforge->add_key('id', TRUE);
     $fields = array(
 
       'id' => array(
