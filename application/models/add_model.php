@@ -14,6 +14,14 @@ class Add_Model Extends CI_Model {
     }
   }
   
+  function deleteIdea($id) {
+    if($this->db->where('id', $id)->delete('comment')) {
+      return TRUE;
+    } else {
+      return FALSE;
+    }
+  }
+  
   function getIdea() {
     return $this->db->limit('10')->order_by('id', 'desc')->get('comment')->result_object();
   }

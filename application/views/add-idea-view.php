@@ -13,5 +13,5 @@
 
 <?php
 foreach($ideas as $r): ?>
-  <p><?=$r->subject.' '.$r->body?></p>
+  <p><?=$r->subject.' '.$r->body.' '.anchor('add/delete/'.$r->id, 'delete')?></p>
 <?php endforeach; ?>

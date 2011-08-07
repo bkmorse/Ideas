@@ -20,6 +20,17 @@ class Add Extends CI_Controller {
     
   }
   
+  function delete($id) {
+    $this->load->model('add_model');
+    
+    if($this->add_model->deleteIdea($id)) {
+      redirect('add/');
+    } else {
+      print '<h2>Could not delete</h2>';
+      redirect('add/');
+    }
+  }
+  
   function table() {
     $this->load->dbforge();
     $this->load->database();
@@ -47,5 +58,6 @@ class Add Extends CI_Controller {
     $this->dbforge->add_field($fields);
     $this->dbforge->create_table('comment');
   }
+  
 }
 ?>
