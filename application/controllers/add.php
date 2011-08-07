@@ -5,15 +5,7 @@ class Add Extends CI_Controller {
     
     $this->load->dbforge();
     $this->load->database();
-    $fields = array(
-      'users' => array(
-      'type' => 'VARCHAR',
-      'constraint' => '100',
-      ),
-    );
     
-    $this->dbforge->add_field($fields);
-    $this->dbforge->create_table('table_name');
     $data = array(
        'subject' => 'My subject' ,
        'body' => 'My body'
