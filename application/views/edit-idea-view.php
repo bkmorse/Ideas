@@ -2,13 +2,13 @@
 
 <p><?=form_label('Subject')?><br />
 <?=form_error('subject')?>
-<?=form_input('subject', '')?></p>
+<?=form_input('subject', $idea->subject)?></p>
 
 <p><?=form_label('Body')?><br />
 <?=form_error('body')?>
-<?=form_textarea('body', '')?></p>
+<?=form_textarea('body', $idea->body)?></p>
 
-<p><?=form_submit('submit', 'Add Idea')?></p>
+<p><?=form_submit('submit', 'Update')?></p>
 <?=form_close()?>
 
 <?php
