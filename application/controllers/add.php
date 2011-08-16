@@ -2,7 +2,6 @@
 
 class Add Extends CI_Controller {
   function index() {
-    
     $this->load->database();
     $this->load->model('add_model');
     

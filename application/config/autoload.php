@@ -52,8 +52,9 @@ $autoload['packages'] = array(APPPATH.'third_party');
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-$autoload['libraries'] = array('form_validation', 'database');
+$autoload['libraries'] = array('form_validation', 'database', 'ion_auth', 'email');
 
+//$autoload['sparks'] = array('ion_auth');
 
 /*
 | -------------------------------------------------------------------
